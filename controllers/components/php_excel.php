@@ -1,5 +1,4 @@
 <?php
-App::uses('Component', 'Controller');
 
 /**
  * Component for working with PHPExcel class.
@@ -7,7 +6,7 @@ App::uses('Component', 'Controller');
  * @package PhpExcel
  * @author segy
  */
-class PhpExcelComponent extends Component {
+class PhpExcelComponent extends Object {
     /**
      * Instance of PHPExcel class
      *
@@ -43,7 +42,7 @@ class PhpExcelComponent extends Component {
      */
     public function createWorksheet() {
         // load vendor classes
-        App::import('Vendor', 'PhpExcel.PHPExcel');
+        App::import('Vendor', 'PhpExcel.PHPExcel', array('file' => 'PHPExcel.php'));
 
         $this->_xls = new PHPExcel();
         $this->_row = 1;
@@ -59,7 +58,7 @@ class PhpExcelComponent extends Component {
      */
     public function loadWorksheet($file) {
         // load vendor classes
-        App::import('Vendor', 'PhpExcel.PHPExcel');
+        App::import('Vendor', 'PhpExcel.PHPExcel', array('file' => 'PHPExcel.php'));
 
         $this->_xls = PHPExcel_IOFactory::load($file);
         $this->setActiveSheet(0);

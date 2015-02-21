@@ -1,5 +1,4 @@
 <?php
-App::uses('AppHelper', 'View/Helper');
 
 /**
  * Helper for working with PHPExcel class.
@@ -43,7 +42,7 @@ class PhpExcelHelper extends AppHelper {
      */
     public function createWorksheet() {
         // load vendor classes
-        App::import('Vendor', 'PhpExcel.PHPExcel');
+        App::import('Vendor', 'PhpExcel.PHPExcel', array('file' => 'PHPExcel.php'));
 
         $this->_xls = new PHPExcel();
         $this->_row = 1;
@@ -59,7 +58,7 @@ class PhpExcelHelper extends AppHelper {
      */
     public function loadWorksheet($file) {
         // load vendor classes
-        App::import('Vendor', 'PhpExcel.PHPExcel');
+        App::import('Vendor', 'PhpExcel.PHPExcel', array('file' => 'PHPExcel.php'));
 
         $this->_xls = PHPExcel_IOFactory::load($file);
         $this->setActiveSheet(0);
