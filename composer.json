@@ -1,0 +1,28 @@
+{
+    "name": "enrique-ibarra/php-excel",
+    "description": "CakePHP 2.x Helper and Component for creating / reading excel files using PHPExcel project (fork from segy/PhpExcel)",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "excel"],
+    "homepage": "https://github.com/enrique-ibarra/PhpExcel",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "authors": [
+        {
+            "name": "CakePHP Community",
+            "homepage": "https://github.com/segy/PhpExcel/graphs/contributors"
+        },
+        {
+            "name": "Enrique Ibarra",
+            "email": "kikonio.dinamo@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/enrique-ibarra/PhpExcel/issues",
+        "source": "https://github.com/enrique-ibarra/PhpExcel"
+    },
+    "extra": {
+        "installer-name": "PhpExcel"
+    }
+}
